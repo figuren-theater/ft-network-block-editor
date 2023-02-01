@@ -16,7 +16,7 @@
 	"dependencies": {
 		"@wordpress/block-editor": "^5.2.8",
 		"@wordpress/blocks": "^7.0.4",
-		"@wordpress/data": "^4.26.7",
+		"@wordpress/data": "^8.3.0",
 		"@wordpress/i18n": "^3.18.0"
 	},
 	"devDependencies": {
