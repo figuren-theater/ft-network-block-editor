@@ -36,7 +36,8 @@ import { __ } from '@wordpress/i18n';
  */
 // import './style.scss';
 
-import icon from './shared/js/icon';
+// import icon from './shared/js/icon';
+import { icon } from '@figuren.theater/logos';
 
 
 /**

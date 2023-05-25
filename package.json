@@ -1,8 +1,8 @@
 {
 	"name": "ft-network-block-editor",
 	"description": "Changes and additions to the WordPress core block-editor and site-editor, formerly known as Gutenberg, made for the figuren.theater Multisite network.",
-    "homepage": "https://websites.fuer.figuren.theater",
- 	"version": "0.4.0",
+	"homepage": "https://websites.fuer.figuren.theater",
+	"version": "0.4.0",
 	"author": "Carsten Bach",
 	"license": "GPL-3.0-or-later",
 	"main": "build/index.js",
@@ -15,6 +15,7 @@
 		"packages-update": "wp-scripts packages-update"
 	},
 	"dependencies": {
+		"@figuren.theater/logos": "^1",
 		"@wordpress/block-editor": "^11.4.0",
 		"@wordpress/blocks": "^12.4.0",
 		"@wordpress/data": "^8.4.0",
