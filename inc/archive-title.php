@@ -13,7 +13,8 @@ namespace Figuren_Theater\Network\Blocks\ArchiveTitle;
 /**
  * Blank out the archive title prefix sometimes.
  *
- * TODO This filter can be removed if/when this issue is resolved: https://github.com/WordPress/gutenberg/issues/30519
+ * @todo #71 This filter can be removed if/when this issue is resolved:
+ * @see  https://github.com/WordPress/gutenberg/issues/30519
  *
  * @return string
  */
