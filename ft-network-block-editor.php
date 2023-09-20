@@ -8,13 +8,10 @@
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:     ft-network-block-editor
  *
- * @package         figurentheater
+ * @package         figurentheater/ft-network-block-editor
  */
 
-
-
 require_once 'inc/archive-title.php';
-
 
 /**
  * Registers all block assets so that they can be enqueued through the block editor
@@ -41,12 +38,6 @@ function figurentheater_ft_network_block_editor__style_enqueue() {
 #add_action( 'init', 'figurentheater_ft_network_block_editor_block_init' );
  */
 
-
-
-
-
-
-
 function figurentheater_ft_network_block_editor_block__enqueue_block_editor_assets() {
 	$dir = __DIR__;
 
@@ -69,10 +60,6 @@ function figurentheater_ft_network_block_editor_block__enqueue_block_editor_asse
 }
 // https://developer.wordpress.org/reference/hooks/enqueue_block_assets/
 add_action( 'enqueue_block_editor_assets', 'figurentheater_ft_network_block_editor_block__enqueue_block_editor_assets' );
-
-
-
-
 
 /**
 #add_action( 'enqueue_block_assets', 'figurentheater_ft_network_block_editor_block__enqueue_block_assets' );
@@ -104,7 +91,7 @@ function figurentheater_ft_network_block_editor_block__enqueue_block_assets() {
 	$style_css = 'src/block-styles/core-group/copy-2-clipboard/style.css';
 
 	// wp_register_style(
-	wp_enqueue_style( 
+	wp_enqueue_style(
 		'figurentheater-ft-network-block-editor--copy-2-clipboard',
 		plugins_url( $style_css, __FILE__ ),
 		array('wp-block-library'),
@@ -117,7 +104,7 @@ function figurentheater_ft_network_block_editor_block__enqueue_block_assets() {
 // TEMP deactivated, for not beeing finished
 // and doing this mess here
 // sorry to everybody reading this
-// 
+//
 // I promise to do better!
-// 
+//
 // add_action( 'enqueue_block_assets', 'figurentheater_ft_network_block_editor_block__enqueue_block_assets' );
