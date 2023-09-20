@@ -21,6 +21,7 @@
 		"@wordpress/i18n": "^4.41.0"
 	},
 	"devDependencies": {
+		"@wordpress/eslint-plugin": "^16.0.0",
 		"@wordpress/scripts": "^26.12.0"
 	}
 }
