@@ -11,7 +11,7 @@
  * @package         figurentheater/ft-network-block-editor
  */
 
-require_once 'inc/archive-title.php';
+require_once __DIR__ . '/inc/archive-title.php';
 
 /**
  * Registers all block assets so that they can be enqueued through the block editor
@@ -37,8 +37,12 @@ function figurentheater_ft_network_block_editor__style_enqueue() {
 }
 #add_action( 'init', 'figurentheater_ft_network_block_editor_block_init' );
  */
-
-function figurentheater_ft_network_block_editor_block__enqueue_block_editor_assets() {
+/**
+ * Enqueues JS block assets.
+ *
+ * @return void
+ */
+function figurentheater_ft_network_block_editor_block__enqueue_block_editor_assets() :void {
 	$dir = __DIR__;
 
 	$script_asset_path = "$dir/build/index.asset.php";
