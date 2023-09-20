@@ -9,12 +9,7 @@
 	<exclude-pattern>*/tests/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern> -->
 
-	<!--
-	is created during composer install,
-	when package is tested
-	and not running within ft-platform
-	-->
-	<exclude-pattern>*/wp-content/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
 
 	<!-- Use figuren.theater Coding Standards -->
 	<rule ref="figurentheater" />

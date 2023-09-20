@@ -9,6 +9,7 @@ parameters:
     excludePaths:
         analyseAndScan:
             - node_modules/
+            - build/
         analyse:
             - vendor/
             # "/wp-content/" is created during composer install,
