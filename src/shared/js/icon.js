@@ -5,6 +5,8 @@ import { Path, SVG } from '@wordpress/components';
  * https://wp.zacgordon.com/2017/12/07/how-to-add-custom-icons-to-gutenberg-editor-blocks-in-wordpress/
  * https://rudrastyh.com/gutenberg/custom-svg-icons.html
  *
+ * @todo #81 Import Logo from f.t/logos instead of redefining it
+ *
  */
 
 

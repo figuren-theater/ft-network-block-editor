@@ -97,13 +97,13 @@ wp.domReady( function() {
 
 
 // 4.
-// 
+//
 // TEMP deactivated, for not beeing finished
 // and doing this mess here
 // sorry to everybody reading this
-// 
-// I promise to do better!
-// 
+//
+// @todo #79 Re-Activate 'copy-2-clipboard' block
+//
 // import './block-styles/core-group/copy-2-clipboard';
 
 
@@ -128,7 +128,7 @@ wp.domReady( function() {
 
 window.onload = function() {
 	// remove stuff that is not for 'typical' users
-	dispatch( editPostStore ).hideBlockTypes( 
+	dispatch( editPostStore ).hideBlockTypes(
 		[
 			'core/freeform',
 			'core/html',
