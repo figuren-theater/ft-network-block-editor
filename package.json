@@ -1,8 +1,6 @@
 {
 	"name": "@figuren-theater/ft-network-block-editor",
 	"description": "Changes and additions to the WordPress core block-editor and site-editor, formerly known as Gutenberg, made for the figuren.theater Multisite network.",
-	"homepage": "https://websites.fuer.figuren.theater",
-	"version": "0.5.0",
 	"author": "Carsten Bach",
 	"license": "GPL-3.0-or-later",
 	"keywords": [
@@ -27,7 +25,30 @@
 		"@wordpress/i18n": "^4.41.0"
 	},
 	"devDependencies": {
-		"@wordpress/eslint-plugin": "^16.0.0",
 		"@wordpress/scripts": "^26.12.0"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"format:js": "wp-scripts format-js",
+		"lint": "concurrently \"npm run lint:css\" \"npm run lint:js\" \"npm run lint:md:docs\" \"npm run lint:pkg-json\"",
+		"lint:css": "wp-scripts lint-style \"**/*.scss\"",
+		"lint:css:fix": "npm run lint:css -- --fix",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js:fix": "npm run lint:js -- --fix",
+		"lint:js:report": "npm run lint:js -- --output-file lint-js-report.json --format json .",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:php": "vendor/bin/phpcs",
+		"lint:php:fix": "vendor/bin/phpcbf",
+		"lint:php:stan": "vendor/bin/phpstan analyze",
+		"lint:pkg-json": "wp-scripts lint-pkg-json --ignorePath .gitignore",
+		"start": "wp-scripts start",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"npmpackagejsonlint": {
+		"extends": "@wordpress/npm-package-json-lint-config",
+		"rules": {
+			"require-version": "off"
+		}
 	}
 }
