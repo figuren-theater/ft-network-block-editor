@@ -5,10 +5,6 @@
  */
 import { registerBlockCollection } from '@wordpress/blocks';
 
-
-
-
-
 // 1st add dependenciy strings
 // to our index.asset.php
 // so in this case 'wp-data'
@@ -18,7 +14,6 @@ import { dispatch, select, useDispatch, useSelect } from '@wordpress/data';
 
 import { store as editPostStore } from '@wordpress/edit-post';
 // import { store as preferencesStore } from '@wordpress/preferences';
-
 
 /**
  * Retrieves the translation of text.
@@ -38,7 +33,6 @@ import { __ } from '@wordpress/i18n';
 
 import icon from './shared/js/icon';
 
-
 /**
  * 1. figuren.theater Block-Collection
  *
@@ -48,16 +42,14 @@ import icon from './shared/js/icon';
  *
  * @see https://make.wordpress.org/core/2020/02/27/block-collections/
  */
-registerBlockCollection( 'figurentheater', {
+registerBlockCollection('figurentheater', {
 	title: 'figuren.theater',
 	icon,
-} );
-registerBlockCollection( 'theatrebase', {
+});
+registerBlockCollection('theatrebase', {
 	title: 'Theater',
 	icon,
-} );
-
-
+});
 
 /**
  * 2. disable fullscreen
@@ -67,34 +59,29 @@ registerBlockCollection( 'theatrebase', {
  *
  * maybe, nicer Alternative at:
  * @see https://plugins.trac.wordpress.org/browser/blockeditor-fullscreen-mode-control/trunk/assets/js/fullscreen.js
-window.onload = function() {
-	const isFullscreenMode = select( editPostStore ).isFeatureActive( 'fullscreenMode' );
-	if ( isFullscreenMode ) {
-		dispatch( editPostStore ).toggleFeature( 'fullscreenMode' ); }
-}
+  window.onload = function() {
+  const isFullscreenMode = select( editPostStore ).isFeatureActive( 'fullscreenMode' );
+  if ( isFullscreenMode ) {
+  dispatch( editPostStore ).toggleFeature( 'fullscreenMode' ); }
+  }
  */
-
 
 /// window.onload stopped working for some un-researched reason
 /// wp.domReady is WORKING
 
 // https://github.com/WordPress/gutenberg/issues/13811#issuecomment-500930584
-wp.domReady( function() {
-	const isFullscreenMode = select( editPostStore ).isFeatureActive( 'fullscreenMode' );
-	if ( isFullscreenMode ) {
-		dispatch( editPostStore ).toggleFeature( 'fullscreenMode' ); }
-} );
-
+wp.domReady(function () {
+	const isFullscreenMode =
+		select(editPostStore).isFeatureActive('fullscreenMode');
+	if (isFullscreenMode) {
+		dispatch(editPostStore).toggleFeature('fullscreenMode');
+	}
+});
 
 /**
  * 3.
  */
 // import './block-styles/core-columns/newspack';
-
-
-
-
-
 
 // 4.
 //
@@ -106,18 +93,6 @@ wp.domReady( function() {
 //
 // import './block-styles/core-group/copy-2-clipboard';
 
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * 5. Hide some Blocks from the inserter, but keep them working
  *    a kinda house-keeping as 'unregisterBlockLight' ;)
@@ -126,13 +101,11 @@ wp.domReady( function() {
  *    https://github.com/WordPress/gutenberg/issues/14139#issuecomment-480261866
  */
 
-window.onload = function() {
+window.onload = function () {
 	// remove stuff that is not for 'typical' users
-	dispatch( editPostStore ).hideBlockTypes(
-		[
-			'core/freeform',
-			'core/html',
-			'core/shortcode',
-		]
-	);
-}
+	dispatch(editPostStore).hideBlockTypes([
+		'core/freeform',
+		'core/html',
+		'core/shortcode',
+	]);
+};
