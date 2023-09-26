@@ -28,6 +28,7 @@ A Multisite network needs a way to handle defaults & behaviour of the *new* Word
 ## Install
 
 1. Install via command line
+
     ```sh
     composer require figuren-theater/ft-network-block-editor
     ```
@@ -38,10 +39,10 @@ A Multisite network needs a way to handle defaults & behaviour of the *new* Word
 
 ## Built with & uses
 
-  - [dependabot](/.github/dependabot.yml)
-  - [code-quality](https://github.com/figuren-theater/code-quality/)
-     A set of status checks to ensure high and consitent code-quality for the figuren.theater platform.
-  - ....
+- [dependabot](/.github/dependabot.yml)
+- [code-quality](https://github.com/figuren-theater/code-quality/)
+	A set of status checks to ensure high and consitent code-quality for the figuren.theater platform.
+- ....
 
 ## Contributing
 
@@ -64,7 +65,7 @@ available, see the [tags on this repository](https://github.com/figuren-theater/
 
 ## Authors
 
-  - **Carsten Bach** - *Provided idea & code* - [figuren.theater/crew](https://figuren.theater/crew/)
+- **Carsten Bach** - *Provided idea & code* - [figuren.theater/crew](https://figuren.theater/crew/)
 
 See also the list of [contributors](https://github.com/figuren-theater/ft-network-block-editor/contributors)
 who participated in this project.
