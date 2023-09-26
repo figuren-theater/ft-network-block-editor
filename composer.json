@@ -31,7 +31,14 @@
 	"require-dev": {
 		"figuren-theater/code-quality": "^0.7.1"
 	},
-	"config": {
+  "autoload": {
+    "files": [
+        "inc/archive-title/namespace.php",
+        "inc/editor-assets/namespace.php",
+        "inc/namespace.php"
+    ]
+},
+  "config": {
 		"allow-plugins": {
 			"phpstan/extension-installer": true,
 			"dealerdirect/phpcodesniffer-composer-installer": true,
