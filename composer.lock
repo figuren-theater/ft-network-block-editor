@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eff06dab90cdac51c91f4054e05b2d8a",
+    "content-hash": "69a714f1c4cdd0e231d71c13ab45e3d0",
     "packages": [],
     "packages-dev": [
         {
@@ -577,16 +577,16 @@
         },
         {
             "name": "figuren-theater/code-quality",
-            "version": "0.7.1",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/code-quality.git",
-                "reference": "2ef49796e92bbe6b54ff90a1d598fc9bd448ad4c"
+                "reference": "e5e2865d9090900bbc5da7230b9787a0f5688674"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/figuren-theater/code-quality/zipball/2ef49796e92bbe6b54ff90a1d598fc9bd448ad4c",
-                "reference": "2ef49796e92bbe6b54ff90a1d598fc9bd448ad4c",
+                "url": "https://api.github.com/repos/figuren-theater/code-quality/zipball/e5e2865d9090900bbc5da7230b9787a0f5688674",
+                "reference": "e5e2865d9090900bbc5da7230b9787a0f5688674",
                 "shasum": ""
             },
             "require": {
@@ -626,7 +626,7 @@
                 "issues": "https://github.com/figuren-theater/code-quality/issues",
                 "source": "https://github.com/figuren-theater/code-quality"
             },
-            "time": "2023-09-13T09:12:30+00:00"
+            "time": "2023-09-26T20:33:46+00:00"
         },
         {
             "name": "figuren-theater/coding-standards",

@@ -29,7 +29,7 @@
 		"php": ">=7.1"
 	},
 	"require-dev": {
-		"figuren-theater/code-quality": "^0.7.1"
+		"figuren-theater/code-quality": "*"
 	},
 	"autoload": {
 		"files": [
