@@ -48,7 +48,8 @@
 	"npmpackagejsonlint": {
 		"extends": "@wordpress/npm-package-json-lint-config",
 		"rules": {
-			"require-version": "off"
+			"require-version": "off",
+      "valid-values-license": ["error", ["GPL-3.0-or-later", "GPL-2.0-or-later"]]
 		}
 	}
 }
