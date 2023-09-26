@@ -1,28 +1,48 @@
 {
 	"name": "figuren-theater/ft-network-block-editor",
 	"description": "Changes and additions to the WordPress core block-editor and site-editor, formerly known as Gutenberg, made for the figuren.theater Multisite network.",
-    "homepage": "https://websites.fuer.figuren.theater",
-    "type": "wordpress-plugin",
-    "keywords": ["wordpress", "wordpress-plugin"],
-    "license": "GPL-3.0-or-later",
-    "authors": [
-        {
-            "name": "figuren.theater",
-            "email": "info@figuren.theater"
-        },
-        {
-            "name": "Carsten Bach",
-            "email": "mail@carsten-bach.de",
-            "homepage": "https://carsten-bach.de",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "email": "info@figuren.theater",
-        "issues": "https://github.com/figuren-theater/ft-network-block-editor/issues",
-        "source": "https://github.com/figuren-theater/ft-network-block-editor"
-    },
+	"license": "GPL-3.0-or-later",
+	"type": "wordpress-plugin",
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin"
+	],
+	"authors": [
+		{
+			"name": "figuren.theater",
+			"email": "info@figuren.theater"
+		},
+		{
+			"name": "Carsten Bach",
+			"email": "mail@carsten-bach.de",
+			"homepage": "https://carsten-bach.de",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://websites.fuer.figuren.theater",
+	"support": {
+		"email": "info@figuren.theater",
+		"issues": "https://github.com/figuren-theater/ft-network-block-editor/issues",
+		"source": "https://github.com/figuren-theater/ft-network-block-editor"
+	},
 	"require": {
-        "php": ">=7.1"
+		"php": ">=7.1"
+	},
+	"require-dev": {
+		"figuren-theater/code-quality": "*"
+	},
+	"autoload": {
+		"files": [
+			"inc/archive-title/namespace.php",
+			"inc/editor-assets/namespace.php",
+			"inc/namespace.php"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"ergebnis/composer-normalize": true
+		}
 	}
 }

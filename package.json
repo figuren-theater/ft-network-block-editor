@@ -1,26 +1,55 @@
 {
-	"name": "ft-network-block-editor",
+	"name": "@figuren-theater/ft-network-block-editor",
 	"description": "Changes and additions to the WordPress core block-editor and site-editor, formerly known as Gutenberg, made for the figuren.theater Multisite network.",
-	"homepage": "https://websites.fuer.figuren.theater",
-	"version": "0.5.0",
 	"author": "Carsten Bach",
 	"license": "GPL-3.0-or-later",
+	"keywords": [
+		"WordPress",
+		"Gutenberg",
+		"block-editor",
+		"site-editor"
+	],
+	"homepage": "https://websites.fuer.figuren.theater",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/figuren-theater/ft-network-block-editor.git"
+	},
+	"bugs": {
+		"url": "https://github.com/figuren-theater/ft-network-block-editor/issues"
+	},
 	"main": "build/index.js",
+	"dependencies": {
+		"@wordpress/block-editor": "^12.9.0",
+		"@wordpress/blocks": "^12.18.0",
+		"@wordpress/data": "^9.11.0",
+		"@wordpress/i18n": "^4.41.0"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.12.0"
+	},
 	"scripts": {
 		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"format:src": "wp-scripts format ./src",
 		"format:js": "wp-scripts format-js",
-		"lint:css": "wp-scripts lint-style",
+		"lint:css": "wp-scripts lint-style \"**/*.scss\"",
+		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "wp-scripts lint-js",
+		"lint:js:fix": "npm run lint:js -- --fix",
+		"lint:js:report": "npm run lint:js -- --output-file lint-js-report.json --format json .",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:php": "vendor/bin/phpcs",
+		"lint:php:fix": "vendor/bin/phpcbf",
+		"lint:php:stan": "vendor/bin/phpstan analyze",
+		"lint:pkg-json": "wp-scripts lint-pkg-json --ignorePath .gitignore",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
-	"dependencies": {
-		"@wordpress/block-editor": "^12.2.0",
-		"@wordpress/blocks": "^12.11.0",
-		"@wordpress/data": "^9.4.0",
-		"@wordpress/i18n": "^4.34.0"
-	},
-	"devDependencies": {
-		"@wordpress/scripts": "^26.5.0"
+	"npmpackagejsonlint": {
+		"extends": "@wordpress/npm-package-json-lint-config",
+		"rules": {
+			"require-version": "off",
+      "valid-values-license": ["error", ["GPL-3.0-or-later", "GPL-2.0-or-later"]]
+		}
 	}
 }
