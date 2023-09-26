@@ -31,7 +31,6 @@
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"format:js": "wp-scripts format-js",
-		"lint": "concurrently \"npm run lint:css\" \"npm run lint:js\" \"npm run lint:md:docs\" \"npm run lint:pkg-json\"",
 		"lint:css": "wp-scripts lint-style \"**/*.scss\"",
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "wp-scripts lint-js",
