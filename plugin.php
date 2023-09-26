@@ -15,4 +15,4 @@ namespace Figuren_Theater\Network_Block_Editor;
 
 const DIRECTORY = __DIR__;
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
+add_action( 'init', __NAMESPACE__ . '\\bootstrap' );
