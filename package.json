@@ -30,6 +30,7 @@
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
+		"format:src": "wp-scripts format ./src",
 		"format:js": "wp-scripts format-js",
 		"lint:css": "wp-scripts lint-style \"**/*.scss\"",
 		"lint:css:fix": "npm run lint:css -- --fix",
