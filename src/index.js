@@ -31,14 +31,14 @@ import icon from './shared/js/icon';
  *
  * @see https://make.wordpress.org/core/2020/02/27/block-collections/
  */
-registerBlockCollection( 'figurentheater', {
+registerBlockCollection('figurentheater', {
 	title: 'figuren.theater',
 	icon,
-} );
-registerBlockCollection( 'theatrebase', {
+});
+registerBlockCollection('theatrebase', {
 	title: 'Theater',
 	icon,
-} );
+});
 
 /**
  * 2. disable fullscreen
@@ -63,13 +63,13 @@ registerBlockCollection( 'theatrebase', {
  *
  * @see https://github.com/WordPress/gutenberg/issues/13811#issuecomment-500930584
  */
-wp.domReady( function () {
+wp.domReady(function () {
 	const isFullscreenMode =
-		select( editPostStore ).isFeatureActive( 'fullscreenMode' );
-	if ( isFullscreenMode ) {
-		dispatch( editPostStore ).toggleFeature( 'fullscreenMode' );
+		select(editPostStore).isFeatureActive('fullscreenMode');
+	if (isFullscreenMode) {
+		dispatch(editPostStore).toggleFeature('fullscreenMode');
 	}
-} );
+});
 
 /**
  * 5. Hide some Blocks from the inserter, but keep them working
@@ -80,9 +80,9 @@ wp.domReady( function () {
  */
 window.onload = function () {
 	// remove stuff that is not for 'typical' users
-	dispatch( editPostStore ).hideBlockTypes( [
+	dispatch(editPostStore).hideBlockTypes([
 		'core/freeform',
 		'core/html',
 		'core/shortcode',
-	] );
+	]);
 };
