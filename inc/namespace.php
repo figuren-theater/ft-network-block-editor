@@ -12,7 +12,7 @@ namespace Figuren_Theater\Network_Block_Editor;
  *
  * @return void
  */
-function bootstrap() :void {
+function bootstrap(): void {
 	Archive_Title\bootstrap();
 	Editor_Assets\bootstrap();
 }
