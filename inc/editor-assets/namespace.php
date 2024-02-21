@@ -1,6 +1,8 @@
 <?php
 /**
  * This file handles everything related to the query-title block
+ *
+ * @package figuren-theater/ft-network-block-editor
  */
 
 namespace Figuren_Theater\Network_Block_Editor\Editor_Assets;
@@ -17,7 +19,7 @@ use function wp_set_script_translations;
  *
  * @return void
  */
-function bootstrap() :void {
+function bootstrap(): void {
 	add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_assets' );
 }
 
@@ -28,7 +30,7 @@ function bootstrap() :void {
  *
  * @return void
  */
-function enqueue_assets() :void {
+function enqueue_assets(): void {
 	$dir = Network_Block_Editor\DIRECTORY;
 
 	$script_asset_path = "$dir/build/index.asset.php";
@@ -38,16 +40,13 @@ function enqueue_assets() :void {
 		);
 	}
 	$index_js     = 'build/index.js';
-	$script_asset = require( $script_asset_path ); // phpcs:ignore WordPressVIPMinimum.Files.IncludingFile.UsingVariable
+	$script_asset = require $script_asset_path; // phpcs:ignore WordPressVIPMinimum.Files.IncludingFile.UsingVariable
 	wp_enqueue_script(
 		'figurentheater-ft-network-block-editor',
 		plugins_url( $index_js, $dir ),
 		$script_asset['dependencies'],
-		$script_asset['version']
+		$script_asset['version'],
+		true
 	);
 	wp_set_script_translations( 'figurentheater-ft-network-block-editor', 'ft-network-block-editor' );
-
 }
-
-
-
