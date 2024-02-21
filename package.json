@@ -19,13 +19,13 @@
 	},
 	"main": "build/index.js",
 	"dependencies": {
-		"@wordpress/block-editor": "^12.9.0",
-		"@wordpress/blocks": "^12.18.0",
-		"@wordpress/data": "^9.11.0",
-		"@wordpress/i18n": "^4.41.0"
+		"@wordpress/block-editor": "^12.19.1",
+		"@wordpress/blocks": "^12.28.1",
+		"@wordpress/data": "^9.21.0",
+		"@wordpress/i18n": "^4.51.0"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.12.0"
+		"@wordpress/scripts": "^27.2.0"
 	},
 	"scripts": {
 		"build": "wp-scripts build",
@@ -49,7 +49,13 @@
 		"extends": "@wordpress/npm-package-json-lint-config",
 		"rules": {
 			"require-version": "off",
-      "valid-values-license": ["error", ["GPL-3.0-or-later", "GPL-2.0-or-later"]]
+			"valid-values-license": [
+				"error",
+				[
+					"GPL-3.0-or-later",
+					"GPL-2.0-or-later"
+				]
+			]
 		}
 	}
 }
